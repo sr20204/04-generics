@@ -21,7 +21,7 @@ SimpleList sl = new SimpleListImpl();
 sl.add(new MyClass());
 sl.add(new MyOtherClass());
 MyClass k1 = (MyClass) sl.get(0);  // all ok
-MyClass k2 = (MyOtherClass) sl.get(1);  // ClassCastException!
+MyClass k2 = (MyClass) sl.get(1);  // ClassCastException!
 ```
 
 Generics help us to avoid both the type cast and the risk of runtime exceptions by checking the type at compile time.
